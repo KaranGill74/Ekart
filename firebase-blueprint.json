@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "user": {
+      "id": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "email": "string",
+      "phone": "string",
+      "address": "string",
+      "city": "string",
+      "zipCode": "string",
+      "role": "string",
+      "avatarUrl": "string"
+    },
+    "product": {
+      "id": "string",
+      "name": "string",
+      "brand": "string",
+      "category": "string",
+      "description": "string",
+      "price": "number",
+      "imageUrl": "string",
+      "createdAt": "string"
+    },
+    "order": {
+      "id": "string",
+      "userId": "string",
+      "userFirstName": "string",
+      "userLastName": "string",
+      "userEmail": "string",
+      "items": "array",
+      "totalAmount": "number",
+      "status": "string",
+      "createdAt": "string"
+    }
+  },
+  "firestore": {
+    "users": {
+      "path": "users/{userId}",
+      "entity": "user"
+    },
+    "products": {
+      "path": "products/{productId}",
+      "entity": "product"
+    },
+    "orders": {
+      "path": "orders/{orderId}",
+      "entity": "order"
+    }
+  }
+}

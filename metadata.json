@@ -1,0 +1,6 @@
+{
+  "name": "EKART",
+  "description": "An premium electronics e-commerce store with detailed user and admin flows, role-based dashboard, inventory management, dynamic filtering, and profile configuration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

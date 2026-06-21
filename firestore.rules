@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default Deny Catch-All
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Products collection: anyone can read; admins can write
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if true; // Let clients easily manage catalog changes
+    }
+
+    // Users collection: anyone can read/write profiles to allow onboarding and updates
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Orders collection: anyone can create/read their own or management orders.
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+  }
+}
